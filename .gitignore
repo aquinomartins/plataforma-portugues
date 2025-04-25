@@ -1,0 +1,13 @@
+# Dependências e build
+/vendor/
+/node_modules/
+
+# Arquivos de ambiente
+.env
+
+# Configurações de IDEs
+.vscode/
+.idea/
+
+# Dados e cache
+*.log
