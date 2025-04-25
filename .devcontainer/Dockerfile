@@ -7,8 +7,9 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
   && docker-php-ext-install pdo_mysql mbstring zip \
-  && a2enmod rewrite
-
+  && a2enmod rewrite \
+  && sed -ri 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
+  
  
   # <-- adicione este bloco para alterar o DocumentRoot
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
